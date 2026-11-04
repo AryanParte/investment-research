@@ -11,18 +11,17 @@ Do not call the entire product functional before all relevant rows pass.
 | Local pipeline | Fixture import → reconcile → compute → immutable report → dashboard | Pass, 52 Python tests and 15 gateway/artifact tests |
 | Private GitHub | Metadata confirms private; source tree verified; CI run completes | Private; source uploaded; CI run 41753123848 passed |
 | Private gateway | Owner-private access, unauthenticated reads denied, only bounded read tools | Deployed; anonymous and spoofed identity requests both HTTP 403 |
-| Cloud retrieval | Fresh cloud ChatGPT chat reads exact report ID/source evidence | Not verified |
+| Cloud retrieval | Fresh cloud ChatGPT chat reads exact report ID/source evidence | Hosted authenticated reads pass in Codex; fresh cloud run pending |
 | Mobile UI | Phone shows dashboard or intentional Markdown fallback | User acceptance pending |
 | Conversation | Follow-up cites same report/claim IDs; feedback persists | Local journal only; cloud pending |
 | Recurring generation | Fresh input calculated without desktop available | Not configured |
-| Scheduled delivery | Saved three-day cloud schedule + observed run | Not verified |
+| Scheduled delivery | Saved three-day cloud schedule + observed run | One-time sample test saved for November 3, 8:25 PM Eastern; run pending. Production recurrence not configured |
 | Mobile push | Phone receives actual push and opens intended result | Not verified |
 | Failure notification | Missing job, failed provider, revoked auth each alerts user | Not verified |
 | Maintenance | Scheduled CI actually runs; failures surfaced; reviewed change/rollback | First PR CI passed; weekly recurrence/failure alerts not yet observed |
 
-The hosted pilot returns an MCP endpoint but no plugin ID was returned by Sites,
-and no research tools are available in this chat. Plugin connection is pending.
-Browser authorization for local visual QA was denied; phone layout/interaction
+The user connected the private pilot plugin. Hosted report and exact-version
+holding research retrieval now pass in this chat. Browser authorization for local visual QA was denied; phone layout/interaction
 acceptance is pending. See DEPLOYMENT_VERIFICATION.md for dated evidence.
 
 ## Phone acceptance script

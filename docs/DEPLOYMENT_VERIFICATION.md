@@ -26,18 +26,26 @@ phone briefing pipeline are **not yet functional**.
   The short generated briefing is 49 seconds at the documented reading rate.
 - No broker/bank connection, financial credential, transaction endpoint,
   recurring investment, paid market feed or personal portfolio import exists.
+- After the user connected the private plugin, `get_latest_briefing` returned the
+  exact report at 01:20:53 UTC. `get_holding_research(NOVA, report_id)` then returned
+  the matching 28 fictional shares, 25.874126% weight, thesis version 1 and the
+  source-linked utilization estimate at 01:21:04 UTC. This proves hosted tool
+  retrieval for this authenticated Codex caller, not fresh cloud/mobile access.
 
 ## Pending integration gate
 
-Sites reports the `/mcp` endpoint and OAuth resource, but no plugin ID. The new
-research tools are absent from this chat; plugin search did not find the private
-pilot. The user has been asked to check Plugins → Personal → Created by you and
-connect the pilot if available. Do not invent an identifier or create a duplicate
-Site to work around provisioning.
+The initial post-deployment metadata had no plugin ID. Provisioning subsequently
+completed and the user confirmed connection. The four research tools are now
+available, and authenticated reads passed. No duplicate Site or alternate
+authentication path was needed.
 
-An authenticated hosted report read, a fresh cloud-chat read, and a report-scoped
-conversation still need verification. No schedule has been created. A one-time
-sample phone delivery test should precede the production three-day recurrence.
+A one-time cloud sample delivery test was saved and enabled for November 3 at
+8:25 PM America/New_York, with `RRULE:FREQ=DAILY;COUNT=1` and exact DTSTART.
+Automation ID: `Automation_a6e5c0888d70819188cd8f0bab794423`.
+The save response had null next/last-run and conversation fields. It proves saved
+configuration only. The actual cloud run, result destination, mobile push and
+widget rendering still need verification. No production three-day recurrence has
+been configured; reading the fixed sample does not refresh it.
 
 Browser authorization for localhost QA was denied. Static responsive/accessibility
 review passed, but desktop visual appearance, mobile rendering, tap behavior and

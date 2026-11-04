@@ -5,7 +5,8 @@ A private, recommendation-only portfolio accounting and research system.
 
 Status: **synthetic-data MVP with a deployed owner-private Sites pilot**. Private
 GitHub CI passes; the hosted gateway rejects anonymous and forged-identity reads.
-Authenticated ChatGPT retrieval is not yet verified. Live data ingestion, scheduled production generation,
+Authenticated report retrieval and a report-scoped research follow-up pass in this
+Codex chat. Live data ingestion, scheduled production generation,
 ChatGPT mobile push, in-chat widgets and unattended maintenance are not yet
 verified. A report being generated does not mean it was delivered.
 
