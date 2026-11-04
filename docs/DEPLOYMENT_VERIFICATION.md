@@ -70,6 +70,16 @@ remain unobserved. No alternate browser route was used to bypass that refusal.
 
 ## Production gates
 
+Hosting version 2 was subsequently built from source commit
+`473519ce61f35fa3c7186d47c9be06003b8bf2b4` and deployed successfully at
+8:34:31 PM Eastern. Authenticated retrieval at 8:35:05 PM returned the identical
+report object, and access metadata still showed only the owner. The hardened
+build passed 55 Python tests, 15 gateway tests and full TypeScript/build checks.
+The production-only npm audit returned zero findings; the full audit still has
+37 flagged build/development entries, including 10 high severity. See
+`integrations/sites-pilot/docs/DEPENDENCY_REMEDIATION.md`; those findings must be
+reviewed before personal data is introduced.
+
 Real manual-import adapter and complete history; primary-source research ingestion;
 licensed live prices and total-return benchmark; private cloud calculation/storage;
 versioned conversation feedback persistence; taxable-lot modeling; successful
