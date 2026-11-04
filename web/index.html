@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Thesis · Investment briefing</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#brief">Skip to briefing</a>
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="#brief" aria-label="Thesis investment briefing">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span>thesis<span class="brand-dot">.</span></span>
+      </a>
+      <span class="permission-label"><span aria-hidden="true">◈</span> Research only</span>
+    </header>
+
+    <div id="load-state" class="load-state" role="status">
+      <span class="loading-dot" aria-hidden="true"></span>
+      <h1>Opening your briefing</h1>
+      <p>Reading the local report. No financial account connection.</p>
+    </div>
+
+    <main id="dashboard" hidden>
+      <aside id="mode-banner" class="mode-banner" aria-label="Data mode">
+        <span class="mode-icon" aria-hidden="true">◇</span>
+        <div><strong id="mode-label"></strong><span id="mode-description"></span></div>
+      </aside>
+
+      <section id="brief" class="section intro" aria-labelledby="brief-title">
+        <div class="eyebrow-row"><span class="eyebrow">YOUR INVESTMENT BRIEF</span><span id="reading-time" class="read-time"></span></div>
+        <div class="title-row"><h1 id="brief-title">A clearer view<br>of your investments.</h1><span class="orbit" aria-hidden="true"><span>↗</span></span></div>
+        <p id="as-of" class="muted"></p>
+        <div id="freshness-chips" class="chips"></div>
+      </section>
+
+      <nav class="page-nav" aria-label="Dashboard sections">
+        <a class="active" href="#portfolio">Portfolio</a><a href="#insights">What changed</a><a href="#explore">Explore</a>
+      </nav>
+
+      <section id="portfolio" class="section" aria-labelledby="portfolio-title">
+        <div class="section-heading"><h2 id="portfolio-title">Your portfolio</h2><span id="account-scope" class="small muted"></span></div>
+        <div id="account-tabs" class="segmented account-tabs" role="group" aria-label="Choose account"></div>
+        <div class="portfolio-card card">
+          <div class="value-label">Portfolio value <span id="value-date" class="small muted"></span></div>
+          <div id="portfolio-value" class="portfolio-value"></div>
+          <div id="gain-line" class="gain-line"></div>
+          <div class="metric-grid">
+            <div><span>Portfolio return</span><strong id="portfolio-return"></strong><small>Flow-adjusted estimate</small></div>
+            <div><span id="benchmark-label">Benchmark return</span><strong id="benchmark-return"></strong><small id="benchmark-note"></small></div>
+            <div><span>Largest drawdown</span><strong id="drawdown"></strong><small>Within this history</small></div>
+          </div>
+
+          <div class="chart-topline"><span id="chart-title">Return over time</span><div class="segmented mini" role="group" aria-label="Chart measure"><button id="chart-return" type="button" aria-pressed="true">Return</button><button id="chart-value" type="button" aria-pressed="false">Value</button></div></div>
+          <div id="chart-legend" class="chart-legend"></div>
+          <div id="performance-chart" class="performance-chart"></div>
+          <div class="chart-inspector"><span id="chart-point-date"></span><strong id="chart-point-value"></strong></div>
+          <label class="sr-only" for="chart-scrubber">Inspect a date on the performance chart</label><input id="chart-scrubber" class="chart-scrubber" type="range" min="0" max="0" value="0">
+          <p id="chart-caption" class="chart-caption"></p>
+        </div>
+        <div id="change-summary" class="change-summary"></div>
+      </section>
+
+      <section id="insights" class="section" aria-labelledby="insights-title">
+        <div class="section-heading"><div><span class="eyebrow">SIGNAL, WITH CONTEXT</span><h2 id="insights-title">Worth your attention</h2></div><span id="insight-count" class="count-badge"></span></div>
+        <p class="section-description">Combined portfolio insights. Open a card to inspect the reasoning.</p>
+        <div id="insight-cards" class="insight-cards"></div>
+        <p id="interaction-note" class="interaction-note">“Copy question” copies a question and report context. Paste it into ChatGPT; this preview does not send messages or synchronize conversations.</p>
+      </section>
+
+      <section class="section allocation-section" aria-labelledby="allocation-title">
+        <div class="section-heading"><h2 id="allocation-title">Where you’re invested</h2><span class="small muted">Includes cash</span></div>
+        <div class="card allocation-card"><div class="allocation-overview"><div id="allocation-chart"></div><div><span class="eyebrow">LARGEST HOLDING</span><strong id="largest-symbol" class="largest-symbol"></strong><span id="largest-weight" class="largest-weight"></span><p id="allocation-context" class="small muted"></p></div></div><div id="holdings-list" class="holdings-list"></div></div>
+      </section>
+
+      <section id="explore" class="section" aria-labelledby="explore-title">
+        <div class="section-heading"><div><span class="eyebrow">A QUESTION, NOT A TRANSACTION</span><h2 id="explore-title">Explore fresh capital</h2></div></div>
+        <div class="card scenario-card">
+          <p>See how an amount you choose would change concentration, with prices held fixed.</p>
+          <div class="scenario-fields"><div><label for="scenario-amount">Hypothetical amount</label><div class="money-input"><span aria-hidden="true">$</span><input id="scenario-amount" inputmode="decimal" type="number" min="0.01" max="1000000" step="0.01" value="500" aria-describedby="scenario-note"></div></div><div><label for="scenario-target">Model allocation to</label><select id="scenario-target"></select></div></div>
+          <div id="scenario-result" class="scenario-result" aria-live="polite"></div>
+          <p id="scenario-note" class="small muted">Illustration only. This does not assess fair value, taxes, IRA eligibility or suitability. No deposit, purchase or transfer occurs.</p>
+          <button id="scenario-question" type="button" class="text-button">Copy a research question <span aria-hidden="true">↗</span></button>
+        </div>
+      </section>
+
+      <section class="section research-section" aria-label="Research and methodology">
+        <details class="card detail-section"><summary><span><span class="eyebrow">GO DEEPER</span><strong>Research & sources</strong></span><span class="expand-icon" aria-hidden="true">+</span></summary><div class="detail-body"><p class="muted small">Facts, estimates, assumptions and opinions are labeled separately. Demo source links are intentionally inactive.</p><div id="research-claims"></div><h3>Source register</h3><div id="source-register"></div><div id="opportunities"></div></div></details>
+        <details class="card detail-section"><summary><span><span class="eyebrow">KNOW THE LIMITS</span><strong>Data quality & methodology</strong></span><span class="expand-icon" aria-hidden="true">+</span></summary><div class="detail-body"><div id="quality-details"></div><div id="methodology"></div><div id="delivery-status" class="status-box"></div><p id="report-identity" class="report-identity"></p><button id="context-copy" class="text-button" type="button">Copy report context <span aria-hidden="true">↗</span></button></div></details>
+      </section>
+
+      <footer class="footer"><span class="brand-mini">thesis.</span><p>Research, not execution.<br>No brokerage, banking or trading permissions.</p><span id="footer-mode"></span></footer>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <dialog id="copy-dialog"><form method="dialog"><div class="section-heading"><h2>Copy for ChatGPT</h2><button type="submit" class="close-button" aria-label="Close">×</button></div><p class="muted">Clipboard access is unavailable. Select and copy this context, then paste it into your conversation.</p><textarea id="copy-fallback" readonly aria-label="Report context to copy"></textarea><button class="primary-button" type="submit">Done</button></form></dialog>
+</body>
+</html>

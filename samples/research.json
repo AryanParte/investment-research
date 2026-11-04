@@ -1,0 +1,16 @@
+{
+  "dataset": "synthetic",
+  "sources": [
+    {"id":"fixture-grid-1","title":"Fictional Gridworks project update","url":"https://research.example.invalid/grid-update","published_at":"2026-11-02T15:00:00Z","retrieved_at":"2026-11-03T20:00:00Z","type":"synthetic_primary_source"},
+    {"id":"fixture-nova-1","title":"Fictional Nova Compute earnings","url":"https://research.example.invalid/nova-results","published_at":"2026-10-30T20:00:00Z","retrieved_at":"2026-11-03T20:00:00Z","type":"synthetic_primary_source"}
+  ],
+  "claims": [
+    {"id":"grid-delivery","symbol":"GRID","kind":"fact","title":"Delivery milestone","text":"In this fictional scenario, Gridworks has energized its first facility. Customer acceptance and billing have not yet begun.","material":true,"thesis_impact":"Energization reduces one execution risk, but it does not establish utilization, revenue or cash returns.","source_ids":["fixture-grid-1"]},
+    {"id":"nova-utilization","symbol":"NOVA","kind":"estimate","title":"Utilization outlook","text":"Fictional management expects 75–85% utilization next quarter; this is guidance, not a reported result.","material":false,"thesis_impact":"Compare future actual utilization with this dated forecast.","source_ids":["fixture-nova-1"]}
+  ],
+  "theses": [
+    {"symbol":"NOVA","name":"Nova Compute — fictional","version":1,"as_of":"2026-11-03T20:00:00Z","thesis":"Scarce compute may generate recurring cash flow if utilization supports replacement costs.","bear":"Pricing falls before equipment is paid back; financing dilutes owners.","base":"Utilization improves while funding remains available; returns depend on entry price.","bull":"Contracted demand and disciplined capacity growth improve cash flow per share.","invalidation":["Customer acceptance fails","Funding gap prevents contracted delivery","Utilization persistently misses the stated range"],"unknowns":["Verified unit economics","Customer concentration","Current valuation relative to cash flow"],"assumptions":["No fresh investment recommendation is possible from synthetic prices."]},
+    {"symbol":"GRID","name":"Gridworks — fictional","version":1,"as_of":"2026-11-03T20:00:00Z","thesis":"Energized infrastructure may earn durable returns if contracts cover financing and maintenance.","bear":"Customer ramp slips while interest and construction costs rise.","base":"Billing begins after acceptance; capital returns remain to be demonstrated.","bull":"Reliable delivery supports repeat contracts and better financing terms.","invalidation":["Material customer cancellation","Unfunded construction commitments"],"unknowns":["Contract terms","Maintenance capital requirements"]}
+  ],
+  "opportunities": [{"symbol":"HEAL","name":"Health Systems — fictional","status":"research_only","reason":"Illustrates a research candidate outside the current infrastructure theme. No verified valuation or recommendation."}]
+}

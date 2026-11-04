@@ -1,0 +1,39 @@
+name: Safe research CI
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 13 * * 1'
+permissions:
+  contents: read
+concurrency:
+  group: safe-research-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  synthetic-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: Verify supported Python
+        run: python3 -c 'import sys; assert sys.version_info >= (3,11)'
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '24'
+      - name: Financial accounting and failure regression tests
+        run: python3 -m unittest discover -s tests -v
+      - name: Privacy and financial capability boundaries
+        run: python3 scripts/check_boundaries.py
+      - name: Build synthetic briefing
+        run: python3 scripts/run.py demo
+      - name: Bundle sample dashboard with restrictive CSP
+        run: python3 scripts/bundle_sample.py
+      - name: Browser JavaScript syntax
+        run: node --check web/app.js
+      - name: Read-only research gateway authorization and protocol
+        run: node --test integrations/sites-pilot/tests/mcp.test.mjs
+      # No artifact upload: production reports must never enter CI.
+      # No deployment, credentials, brokerage connections, or private data.

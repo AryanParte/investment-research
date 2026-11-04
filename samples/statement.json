@@ -1,0 +1,1 @@
+{"dataset":"synthetic","valuation_date":"2026-11-03","accounts":[{"id":"taxable","cash":"1025","holdings":[{"symbol":"NOVA","quantity":"16"},{"symbol":"GRID","quantity":"15"},{"symbol":"CORE","quantity":"5"}]},{"id":"roth","cash":"652","holdings":[{"symbol":"NOVA","quantity":"12"},{"symbol":"CORE","quantity":"10"}]}]}
