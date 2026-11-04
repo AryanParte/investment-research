@@ -3,8 +3,9 @@
 A private, recommendation-only portfolio accounting and research system.
 **No brokerage, banking, payments, financial credentials or trade execution.**
 
-Status: **local synthetic-data MVP**. A separate owner-private Sites pilot tests
-cloud report retrieval. Live data ingestion, scheduled production generation,
+Status: **synthetic-data MVP with a deployed owner-private Sites pilot**. Private
+GitHub CI passes; the hosted gateway rejects anonymous and forged-identity reads.
+Authenticated ChatGPT retrieval is not yet verified. Live data ingestion, scheduled production generation,
 ChatGPT mobile push, in-chat widgets and unattended maintenance are not yet
 verified. A report being generated does not mean it was delivered.
 
@@ -80,6 +81,7 @@ private/ runtime/ dist/   ignored local input and generated output
 ```
 
 Start with [architecture](docs/ARCHITECTURE.md), [verification](docs/ACCEPTANCE.md),
+[deployment evidence](docs/DEPLOYMENT_VERIFICATION.md), [roadmap](docs/ROADMAP.md),
 [operations](docs/OPERATIONS.md), and [third-party review](docs/REPOSITORY_AUDIT.md).
 
 ## Development
