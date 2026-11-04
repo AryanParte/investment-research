@@ -16,9 +16,11 @@ blocked until the chosen channel and missed-run scenario are tested.
 
 - Each pull request/push: expected-value accounting tests, pipeline failure tests,
   privacy/capability boundary checks, syntax checks and synthetic dashboard build.
-- Weekly GitHub Actions: the same regression suite; dependency-update PRs for
-  GitHub Actions only until other dependencies are introduced. No private imports,
-  report attachments or debug dumps.
+- Weekly GitHub Actions: the same regression suite and production dependency
+  advisory checks against the sanitized hosting lockfile. Dependabot creates
+  reviewed update PRs for GitHub Actions and hosting npm dependencies. Copying a
+  dependency update into the actual Site still requires its full build and
+  private deployment checks. No private imports, report attachments or debug dumps.
 - Monthly: inspect dependency/security advisories, data provider contracts,
   benchmark methodology, stale-source behavior and research prompt evaluations.
 - Each deployment: compare synthetic golden fixtures, require review, preserve

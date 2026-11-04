@@ -48,6 +48,15 @@ If native same-chat scheduled retrieval is unavailable, supported MCP Events may
 wake a subscribed Work chat. There is no assumed general-purpose API to inject
 messages into arbitrary ordinary ChatGPT conversations.
 
+The actual Sites schedule acceptance test created a separate durable cloud
+Work/Codex task. It did not post into the existing ordinary ChatGPT conversation.
+The user confirmed its push opened the result on the phone, and the linked private
+dashboard worked. This is the verified first delivery path: a new scheduled
+result plus the same authenticated report service for follow-up questions.
+Same-chat recurrence and embedded mobile widgets remain optional, unverified
+enhancements. Retain exact report IDs so a separate research chat can retrieve
+the same evidence without depending on inherited chat memory.
+
 ## Safe pilot
 
 The account-provided Sites service offers owner-private hosting, ChatGPT sign-in,
@@ -55,7 +64,8 @@ read-only MCP tools and cloud scheduling. A synthetic snapshot pilot tests those
 boundaries without financial data or API keys. Tool discovery contains only
 report and research reads; no financial actions exist. Native tool-returned
 Markdown is the portable fallback. The buildless dashboard offers report-scoped
-copyable questions; an in-chat MCP UI bridge is a later verified enhancement.
+copyable questions and a feature-detected in-chat follow-up bridge. Its embedded
+MCP UI is implemented but not yet verified on mobile; the linked dashboard is.
 
 Sites runs JavaScript Workers. The Python calculation engine cannot be assumed to
 run there. For production, deploy the Python job on a private scheduled compute
