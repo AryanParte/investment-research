@@ -42,17 +42,43 @@ authentication path was needed.
 A one-time cloud sample delivery test was saved and enabled for November 3 at
 8:25 PM America/New_York, with `RRULE:FREQ=DAILY;COUNT=1` and exact DTSTART.
 Automation ID: `Automation_a6e5c0888d70819188cd8f0bab794423`.
-The save response had null next/last-run and conversation fields. It proves saved
-configuration only. The actual cloud run, result destination, mobile push and
-widget rendering still need verification. No production three-day recurrence has
-been configured; reading the fixed sample does not refresh it.
+The save response had null next/last-run and conversation fields. A later observed
+run completed successfully on the `durable` cloud executor at 8:24:47 PM Eastern,
+slightly before the saved 8:25 PM time. Task ID:
+`01a1a428-41e4-73ba-8974-81a04986703d`.
+
+The run called the private plugin's `get_latest_briefing`, then
+`get_holding_research` with the identical report ID. Its final sample briefing
+preserved the source date, correct contribution/gain/benchmark amounts and source
+qualifications, and included the private dashboard link. It did not read desktop
+files. This verifies a real cloud scheduled read → research follow-up → generated
+text result for the synthetic pilot.
+
+The result is a **separate cloud Work/Codex task**, not an injected message in the
+user's existing ordinary ChatGPT conversation. The user subsequently confirmed:
+"Yes, push arrived and opened the briefing" and "Yes, it works on my phone"
+for the linked dashboard's readability, account switch and expandable insights.
+This completes the synthetic cloud-read → briefing → mobile-push → linked-dashboard
+acceptance test. Embedded in-chat widget rendering, continued phone conversation
+and an explicit laptop-off test remain unverified. No production three-day
+recurrence has been configured; reading the fixed sample does not refresh it.
 
 Browser authorization for localhost QA was denied. Static responsive/accessibility
-review passed, but desktop visual appearance, mobile rendering, tap behavior and
-ChatGPT widget presentation remain unobserved. No alternate browser route was
-used to bypass that refusal.
+review passed, and the user later confirmed the deployed linked dashboard works on
+their phone. Desktop visual appearance and embedded ChatGPT widget presentation
+remain unobserved. No alternate browser route was used to bypass that refusal.
 
 ## Production gates
+
+Hosting version 2 was subsequently built from source commit
+`473519ce61f35fa3c7186d47c9be06003b8bf2b4` and deployed successfully at
+8:34:31 PM Eastern. Authenticated retrieval at 8:35:05 PM returned the identical
+report object, and access metadata still showed only the owner. The hardened
+build passed 55 Python tests, 15 gateway tests and full TypeScript/build checks.
+The production-only npm audit returned zero findings; the full audit still has
+37 flagged build/development entries, including 10 high severity. See
+`integrations/sites-pilot/docs/DEPENDENCY_REMEDIATION.md`; those findings must be
+reviewed before personal data is introduced.
 
 Real manual-import adapter and complete history; primary-source research ingestion;
 licensed live prices and total-return benchmark; private cloud calculation/storage;

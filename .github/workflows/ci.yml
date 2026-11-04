@@ -35,5 +35,11 @@ jobs:
         run: node --check web/app.js
       - name: Read-only research gateway authorization and protocol
         run: node --test integrations/sites-pilot/tests/mcp.test.mjs
+      - name: Hosted production dependency advisories
+        working-directory: integrations/sites-pilot/runtime
+        run: npm audit --omit=dev --audit-level=moderate --registry=https://registry.npmjs.org
+      - name: Full dependency audit (critical gate; known noncritical findings tracked)
+        working-directory: integrations/sites-pilot/runtime
+        run: npm audit --audit-level=critical --registry=https://registry.npmjs.org
       # No artifact upload: production reports must never enter CI.
       # No deployment, credentials, brokerage connections, or private data.

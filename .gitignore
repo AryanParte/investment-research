@@ -18,3 +18,8 @@ node_modules/
 playwright-report/
 test-results/
 .openai/
+# Only audited package metadata is allowed in the hosting runtime snapshot.
+!integrations/sites-pilot/runtime/
+integrations/sites-pilot/runtime/*
+!integrations/sites-pilot/runtime/package.json
+!integrations/sites-pilot/runtime/package-lock.json

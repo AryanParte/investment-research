@@ -5,10 +5,12 @@ A private, recommendation-only portfolio accounting and research system.
 
 Status: **synthetic-data MVP with a deployed owner-private Sites pilot**. Private
 GitHub CI passes; the hosted gateway rejects anonymous and forged-identity reads.
-Authenticated report retrieval and a report-scoped research follow-up pass in this
-Codex chat. Live data ingestion, scheduled production generation,
-ChatGPT mobile push, in-chat widgets and unattended maintenance are not yet
-verified. A report being generated does not mean it was delivered.
+Authenticated report retrieval and report-scoped research follow-ups pass in this
+Codex chat and a scheduled cloud task. The user confirmed the one-time sample push
+arrived, opened the briefing, and the private dashboard worked on their phone.
+Live data ingestion, scheduled production generation, embedded in-chat widgets and
+unattended maintenance are not yet verified. The sample test does not make the
+production investment service functional.
 
 ## Run without installing dependencies
 

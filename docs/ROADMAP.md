@@ -13,6 +13,11 @@ fictional data only. This is the implemented first slice.
 
 ## 2. Prove the phone experience
 
+Sample delivery gate passed November 3: authenticated hosted reads, a scheduled
+durable cloud task, and user-confirmed push receipt/opening and interactive linked
+dashboard. The run creates a separate Work/Codex task. Embedded mobile widgets,
+same-chat recurrence and durable conversation edits are separate pending gates.
+
 Publish the owner-private sample gateway. Connect it to a cloud ChatGPT Work chat,
 retrieve the exact sample report, and ask a report-scoped follow-up. Test the
 interactive widget on the phone; use the short text plus private dashboard link
