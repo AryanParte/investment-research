@@ -1,0 +1,552 @@
+{
+  "schema_version": 1,
+  "mode": "sample",
+  "as_of": "2026-11-03T22:00:00+00:00",
+  "analysis": {
+    "schema_version": "1.0",
+    "as_of": "2026-11-03T22:00:00+00:00",
+    "valuation_date": "2026-11-03",
+    "history_start": "2026-10-26",
+    "currency": "USD",
+    "summary": {
+      "equity": "6006.00",
+      "cash": "1677.00",
+      "positions_value": "4329.00",
+      "net_contributions": "5750.00",
+      "gain": "256.00",
+      "twr_pct": "4.698317",
+      "benchmark_twr_pct": "1.500000",
+      "benchmark_equity": "5831.49",
+      "benchmark_excess_value": "174.51",
+      "max_drawdown_pct": "-1.304647",
+      "xirr_pct": null
+    },
+    "holdings": [
+      {
+        "symbol": "NOVA",
+        "quantity": "28.000000000000",
+        "price": "55.500000",
+        "market_value": "1554.00",
+        "weight_pct": "25.874126",
+        "price_date": "2026-11-03",
+        "source": "synthetic-fixture-not-market-data",
+        "as_of": "2026-11-03T21:00:00+00:00"
+      },
+      {
+        "symbol": "CORE",
+        "quantity": "15.000000000000",
+        "price": "101.000000",
+        "market_value": "1515.00",
+        "weight_pct": "25.224775",
+        "price_date": "2026-11-03",
+        "source": "synthetic-fixture-not-market-data",
+        "as_of": "2026-11-03T21:00:00+00:00"
+      },
+      {
+        "symbol": "GRID",
+        "quantity": "15.000000000000",
+        "price": "84.000000",
+        "market_value": "1260.00",
+        "weight_pct": "20.979021",
+        "price_date": "2026-11-03",
+        "source": "synthetic-fixture-not-market-data",
+        "as_of": "2026-11-03T21:00:00+00:00"
+      }
+    ],
+    "accounts": [
+      {
+        "id": "roth",
+        "equity": "2328.00",
+        "cash": "652.00",
+        "positions_value": "1676.00",
+        "net_contributions": "2250.00",
+        "gain": "78.00",
+        "twr_pct": "3.900000",
+        "max_drawdown_pct": "-0.710059",
+        "holdings": [
+          {
+            "symbol": "CORE",
+            "quantity": "10.000000000000",
+            "price": "101.000000",
+            "market_value": "1010.00",
+            "weight_pct": "43.384880",
+            "price_date": "2026-11-03",
+            "source": "synthetic-fixture-not-market-data",
+            "as_of": "2026-11-03T21:00:00+00:00"
+          },
+          {
+            "symbol": "NOVA",
+            "quantity": "12.000000000000",
+            "price": "55.500000",
+            "market_value": "666.00",
+            "weight_pct": "28.608247",
+            "price_date": "2026-11-03",
+            "source": "synthetic-fixture-not-market-data",
+            "as_of": "2026-11-03T21:00:00+00:00"
+          }
+        ],
+        "timeline": [
+          {
+            "date": "2026-10-26",
+            "equity": "2000.00",
+            "net_flow": "2000.00",
+            "twr_pct": "0.000000"
+          },
+          {
+            "date": "2026-10-27",
+            "equity": "2028.00",
+            "net_flow": "0.00",
+            "twr_pct": "1.400000"
+          },
+          {
+            "date": "2026-10-28",
+            "equity": "2013.60",
+            "net_flow": "0.00",
+            "twr_pct": "0.680000"
+          },
+          {
+            "date": "2026-10-29",
+            "equity": "2056.80",
+            "net_flow": "0.00",
+            "twr_pct": "2.840000"
+          },
+          {
+            "date": "2026-10-30",
+            "equity": "2070.40",
+            "net_flow": "0.00",
+            "twr_pct": "3.520000"
+          },
+          {
+            "date": "2026-11-02",
+            "equity": "2085.60",
+            "net_flow": "0.00",
+            "twr_pct": "4.280000"
+          },
+          {
+            "date": "2026-11-03",
+            "equity": "2328.00",
+            "net_flow": "250.00",
+            "twr_pct": "3.900000"
+          }
+        ]
+      },
+      {
+        "id": "taxable",
+        "equity": "3678.00",
+        "cash": "1025.00",
+        "positions_value": "2653.00",
+        "net_contributions": "3500.00",
+        "gain": "178.00",
+        "twr_pct": "5.133124",
+        "max_drawdown_pct": "-1.698514",
+        "holdings": [
+          {
+            "symbol": "GRID",
+            "quantity": "15.000000000000",
+            "price": "84.000000",
+            "market_value": "1260.00",
+            "weight_pct": "34.257749",
+            "price_date": "2026-11-03",
+            "source": "synthetic-fixture-not-market-data",
+            "as_of": "2026-11-03T21:00:00+00:00"
+          },
+          {
+            "symbol": "NOVA",
+            "quantity": "16.000000000000",
+            "price": "55.500000",
+            "market_value": "888.00",
+            "weight_pct": "24.143556",
+            "price_date": "2026-11-03",
+            "source": "synthetic-fixture-not-market-data",
+            "as_of": "2026-11-03T21:00:00+00:00"
+          },
+          {
+            "symbol": "CORE",
+            "quantity": "5.000000000000",
+            "price": "101.000000",
+            "market_value": "505.00",
+            "weight_pct": "13.730288",
+            "price_date": "2026-11-03",
+            "source": "synthetic-fixture-not-market-data",
+            "as_of": "2026-11-03T21:00:00+00:00"
+          }
+        ],
+        "timeline": [
+          {
+            "date": "2026-10-26",
+            "equity": "2999.00",
+            "net_flow": "3000.00",
+            "twr_pct": "-0.033333"
+          },
+          {
+            "date": "2026-10-27",
+            "equity": "3061.50",
+            "net_flow": "0.00",
+            "twr_pct": "2.050000"
+          },
+          {
+            "date": "2026-10-28",
+            "equity": "3509.50",
+            "net_flow": "500.00",
+            "twr_pct": "0.316667"
+          },
+          {
+            "date": "2026-10-29",
+            "equity": "3604.00",
+            "net_flow": "0.00",
+            "twr_pct": "3.017885"
+          },
+          {
+            "date": "2026-10-30",
+            "equity": "3654.00",
+            "net_flow": "0.00",
+            "twr_pct": "4.447101"
+          },
+          {
+            "date": "2026-11-02",
+            "equity": "3702.00",
+            "net_flow": "0.00",
+            "twr_pct": "5.819148"
+          },
+          {
+            "date": "2026-11-03",
+            "equity": "3678.00",
+            "net_flow": "0.00",
+            "twr_pct": "5.133124"
+          }
+        ]
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2026-10-26",
+        "equity": "4999.00",
+        "net_flow": "5000.00",
+        "cumulative_contributions": "5000.00",
+        "twr_pct": "-0.020000",
+        "benchmark_equity": "5000.00",
+        "benchmark_return_pct": "0.000000"
+      },
+      {
+        "date": "2026-10-27",
+        "equity": "5089.50",
+        "net_flow": "0.00",
+        "cumulative_contributions": "5000.00",
+        "twr_pct": "1.790000",
+        "benchmark_equity": "5025.00",
+        "benchmark_return_pct": "0.500000"
+      },
+      {
+        "date": "2026-10-28",
+        "equity": "5523.10",
+        "net_flow": "500.00",
+        "cumulative_contributions": "5500.00",
+        "twr_pct": "0.462000",
+        "benchmark_equity": "5510.00",
+        "benchmark_return_pct": "0.200000"
+      },
+      {
+        "date": "2026-10-29",
+        "equity": "5660.80",
+        "net_flow": "0.00",
+        "cumulative_contributions": "5500.00",
+        "twr_pct": "2.966683",
+        "benchmark_equity": "5553.99",
+        "benchmark_return_pct": "1.000000"
+      },
+      {
+        "date": "2026-10-30",
+        "equity": "5724.40",
+        "net_flow": "0.00",
+        "cumulative_contributions": "5500.00",
+        "twr_pct": "4.123531",
+        "benchmark_equity": "5570.49",
+        "benchmark_return_pct": "1.300000"
+      },
+      {
+        "date": "2026-11-02",
+        "equity": "5787.60",
+        "net_flow": "0.00",
+        "cumulative_contributions": "5500.00",
+        "twr_pct": "5.273102",
+        "benchmark_equity": "5597.98",
+        "benchmark_return_pct": "1.800000"
+      },
+      {
+        "date": "2026-11-03",
+        "equity": "6006.00",
+        "net_flow": "250.00",
+        "cumulative_contributions": "5750.00",
+        "twr_pct": "4.698317",
+        "benchmark_equity": "5831.49",
+        "benchmark_return_pct": "1.500000"
+      }
+    ],
+    "quality": {
+      "status": "fresh",
+      "valuation_age_days": 0,
+      "history_attested_complete": true,
+      "broker_reconciled": false,
+      "provenance_status": "declared_not_independently_verified",
+      "warnings": [
+        "History completeness is a caller attestation, not broker verification.",
+        "Returns use an end-of-day external-flow convention; intraday cash flows can affect accuracy.",
+        "The supplied benchmark defines the observation calendar; exchange-calendar completeness is not independently certified.",
+        "XIRR is unavailable in this MVP; short periods are not annualized."
+      ],
+      "statement_reconciled": true,
+      "statement_authenticity": "not_independently_verified"
+    },
+    "methodology": {
+      "prices": "Raw closes; splits applied as explicit share-multiplier events.",
+      "twr": "Estimated daily time-weighted return: (ending value - external end-of-day flow) / previous ending value. Initial funding of a zero-value segment is treated as opening capital.",
+      "benchmark": "Hypothetical units bought/sold at each external-flow date using a supplied total-return index. Internal transfers cancel at combined level. No taxes or trading costs deducted from the benchmark.",
+      "drawdown": "Largest decline in the flow-adjusted return index, expressed as a negative percentage.",
+      "net_contributions": "Net external flows; per-account figures include paired internal transfers. Not an IRA tax-year contribution calculation.",
+      "taxes": "Pre-tax performance. No tax-lot, realized-gain, wash-sale, or IRA eligibility certification."
+    },
+    "sources": [
+      {
+        "source": "synthetic-broad-market-total-return-index",
+        "as_of": "2026-10-26T21:00:00+00:00"
+      },
+      {
+        "source": "synthetic-fixture-not-market-data",
+        "as_of": "2026-10-26T21:00:00+00:00"
+      },
+      {
+        "source": "synthetic-broad-market-total-return-index",
+        "as_of": "2026-10-27T21:00:00+00:00"
+      },
+      {
+        "source": "synthetic-fixture-not-market-data",
+        "as_of": "2026-10-27T21:00:00+00:00"
+      },
+      {
+        "source": "synthetic-broad-market-total-return-index",
+        "as_of": "2026-10-28T21:00:00+00:00"
+      },
+      {
+        "source": "synthetic-fixture-not-market-data",
+        "as_of": "2026-10-28T21:00:00+00:00"
+      },
+      {
+        "source": "synthetic-broad-market-total-return-index",
+        "as_of": "2026-10-29T21:00:00+00:00"
+      },
+      {
+        "source": "synthetic-fixture-not-market-data",
+        "as_of": "2026-10-29T21:00:00+00:00"
+      },
+      {
+        "source": "synthetic-broad-market-total-return-index",
+        "as_of": "2026-10-30T21:00:00+00:00"
+      },
+      {
+        "source": "synthetic-fixture-not-market-data",
+        "as_of": "2026-10-30T21:00:00+00:00"
+      },
+      {
+        "source": "synthetic-broad-market-total-return-index",
+        "as_of": "2026-11-02T21:00:00+00:00"
+      },
+      {
+        "source": "synthetic-fixture-not-market-data",
+        "as_of": "2026-11-02T21:00:00+00:00"
+      },
+      {
+        "source": "synthetic-broad-market-total-return-index",
+        "as_of": "2026-11-03T21:00:00+00:00"
+      },
+      {
+        "source": "synthetic-fixture-not-market-data",
+        "as_of": "2026-11-03T21:00:00+00:00"
+      }
+    ],
+    "reconciliation": {
+      "event_count": 16,
+      "account_count": 2,
+      "position_count": 3,
+      "status": "matched_to_supplied_statement",
+      "comparison": {
+        "status": "matched",
+        "valuation_date": "2026-11-03",
+        "discrepancies": [],
+        "account_count": 2,
+        "scope": "Cash and share endpoint comparison only; statement authenticity and historical completeness require independent checks."
+      }
+    }
+  },
+  "changes_since_previous": null,
+  "policy_assumptions": {
+    "concentration_review_pct": "20",
+    "concentration_change_pp": "2"
+  },
+  "insights": [
+    {
+      "id": "grid-delivery",
+      "kind": "fact",
+      "symbol": "GRID",
+      "title": "Delivery milestone",
+      "text": "In this fictional scenario, Gridworks has energized its first facility. Customer acceptance and billing have not yet begun.",
+      "basis": "Energization reduces one execution risk, but it does not establish utilization, revenue or cash returns.",
+      "source_ids": [
+        "fixture-grid-1"
+      ],
+      "question": "Challenge the evidence and assumptions for research claim grid-delivery.",
+      "action": "research"
+    },
+    {
+      "id": "concentration-NOVA",
+      "kind": "opinion",
+      "symbol": "NOVA",
+      "title": "Concentration review",
+      "text": "NOVA represents 25.9% of the combined portfolio. Review whether this fits your risk budget.",
+      "basis": "Calculated from the imported holdings and valuation marks. The review threshold is a configurable assumption, not a sell instruction.",
+      "question": "Explain the NOVA concentration calculation and the assumptions behind this review.",
+      "action": "review",
+      "source_ids": []
+    },
+    {
+      "id": "concentration-CORE",
+      "kind": "opinion",
+      "symbol": "CORE",
+      "title": "Concentration review",
+      "text": "CORE represents 25.2% of the combined portfolio. Review whether this fits your risk budget.",
+      "basis": "Calculated from the imported holdings and valuation marks. The review threshold is a configurable assumption, not a sell instruction.",
+      "question": "Explain the CORE concentration calculation and the assumptions behind this review.",
+      "action": "review",
+      "source_ids": []
+    }
+  ],
+  "research": {
+    "dataset": "synthetic",
+    "sources": [
+      {
+        "id": "fixture-grid-1",
+        "title": "Fictional Gridworks project update",
+        "url": "https://research.example.invalid/grid-update",
+        "published_at": "2026-11-02T15:00:00Z",
+        "retrieved_at": "2026-11-03T20:00:00Z",
+        "type": "synthetic_primary_source"
+      },
+      {
+        "id": "fixture-nova-1",
+        "title": "Fictional Nova Compute earnings",
+        "url": "https://research.example.invalid/nova-results",
+        "published_at": "2026-10-30T20:00:00Z",
+        "retrieved_at": "2026-11-03T20:00:00Z",
+        "type": "synthetic_primary_source"
+      }
+    ],
+    "claims": [
+      {
+        "id": "grid-delivery",
+        "symbol": "GRID",
+        "kind": "fact",
+        "title": "Delivery milestone",
+        "text": "In this fictional scenario, Gridworks has energized its first facility. Customer acceptance and billing have not yet begun.",
+        "material": true,
+        "thesis_impact": "Energization reduces one execution risk, but it does not establish utilization, revenue or cash returns.",
+        "source_ids": [
+          "fixture-grid-1"
+        ]
+      },
+      {
+        "id": "nova-utilization",
+        "symbol": "NOVA",
+        "kind": "estimate",
+        "title": "Utilization outlook",
+        "text": "Fictional management expects 75\u201385% utilization next quarter; this is guidance, not a reported result.",
+        "material": false,
+        "thesis_impact": "Compare future actual utilization with this dated forecast.",
+        "source_ids": [
+          "fixture-nova-1"
+        ]
+      }
+    ],
+    "theses": [
+      {
+        "symbol": "NOVA",
+        "name": "Nova Compute \u2014 fictional",
+        "version": 1,
+        "as_of": "2026-11-03T20:00:00Z",
+        "thesis": "Scarce compute may generate recurring cash flow if utilization supports replacement costs.",
+        "bear": "Pricing falls before equipment is paid back; financing dilutes owners.",
+        "base": "Utilization improves while funding remains available; returns depend on entry price.",
+        "bull": "Contracted demand and disciplined capacity growth improve cash flow per share.",
+        "invalidation": [
+          "Customer acceptance fails",
+          "Funding gap prevents contracted delivery",
+          "Utilization persistently misses the stated range"
+        ],
+        "unknowns": [
+          "Verified unit economics",
+          "Customer concentration",
+          "Current valuation relative to cash flow"
+        ],
+        "assumptions": [
+          "No fresh investment recommendation is possible from synthetic prices."
+        ]
+      },
+      {
+        "symbol": "GRID",
+        "name": "Gridworks \u2014 fictional",
+        "version": 1,
+        "as_of": "2026-11-03T20:00:00Z",
+        "thesis": "Energized infrastructure may earn durable returns if contracts cover financing and maintenance.",
+        "bear": "Customer ramp slips while interest and construction costs rise.",
+        "base": "Billing begins after acceptance; capital returns remain to be demonstrated.",
+        "bull": "Reliable delivery supports repeat contracts and better financing terms.",
+        "invalidation": [
+          "Material customer cancellation",
+          "Unfunded construction commitments"
+        ],
+        "unknowns": [
+          "Contract terms",
+          "Maintenance capital requirements"
+        ]
+      }
+    ],
+    "opportunities": [
+      {
+        "symbol": "HEAL",
+        "name": "Health Systems \u2014 fictional",
+        "status": "research_only",
+        "reason": "Illustrates a research candidate outside the current infrastructure theme. No verified valuation or recommendation."
+      }
+    ]
+  },
+  "status": {
+    "account_connection": "none",
+    "trading_capabilities": "absent",
+    "delivery": "not_verified",
+    "mobile_rendering": "not_verified",
+    "quote_feed": "synthetic"
+  },
+  "constraints": [
+    "Recommendation only",
+    "No financial permissions",
+    "Budget is user supplied; no scheduled purchases"
+  ],
+  "opportunities": [
+    {
+      "symbol": "HEAL",
+      "name": "Health Systems \u2014 fictional",
+      "status": "research_only",
+      "reason": "Illustrates a research candidate outside the current infrastructure theme. No verified valuation or recommendation."
+    }
+  ],
+  "follow_up_contract": "Use this report_id and its source/thesis versions. Retrieve newer data explicitly; do not silently mix dates.",
+  "report_id": "brief-e2b2b07bb6e6cfdc49e1",
+  "reading_words": 146,
+  "estimated_read_seconds": 49,
+  "input_hashes": {
+    "transactions.csv": "bb50e999f8d51e71ae4c9e6aaa04aee29839d24e347a37770357d2620d6a090c",
+    "prices.csv": "647419ab4f0a10fd2361864ac7f225c8ad33e116ece4a3a9e7074c00644fb2e2",
+    "benchmark.csv": "e39f18b02f058ff28d567067bd486708779a35c19cdaa229a2ad68e71a3f2049",
+    "research.json": "30c2718e790a23f3acde53f737372f2fe3623caa3acfbd4e6ad2944b3f07f36d",
+    "statement.json": "85592fda605b2a8393806c9d6bf305eb2674f7a12a4bc98f317658e8aa79b2f0"
+  },
+  "pipeline_version": "1.1.0"
+}
