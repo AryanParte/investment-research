@@ -1,10 +1,10 @@
 # Investment Research
 
-A private, recommendation-only portfolio accounting and research system.
+A recommendation-only portfolio accounting and research system.
 **No brokerage, banking, payments, financial credentials or trade execution.**
 
-Status: **synthetic-data MVP with a deployed owner-private Sites pilot**. Private
-GitHub CI passes; the hosted gateway rejects anonymous and forged-identity reads.
+Status: **synthetic-data MVP with a deployed owner-private Sites pilot**.
+GitHub CI tests synthetic data; the hosted gateway rejects anonymous and forged-identity reads.
 Authenticated report retrieval and report-scoped research follow-ups pass in this
 Codex chat and a scheduled cloud task. The user confirmed the one-time sample push
 arrived, opened the briefing, and the private dashboard worked on their phone.
@@ -42,6 +42,10 @@ no write API. Stop it with Ctrl-C.
 - Facts, estimates, assumptions and opinions are distinct. Material claims need
   provenance and an explanation of thesis impact.
 - Append-only local research/decision history; failure/freshness detection.
+- Read-only local MCP over protected, validated manual imports; no broker token or
+  network client. See [local MCP](docs/LOCAL_MCP.md) for its separate acceptance gates.
+- A fail-closed hosted advice contract: personal requests receive missing evidence
+  and no allocation, while fictional demo reads require explicit opt-in.
 
 ## Important calculation limits
 
@@ -89,10 +93,18 @@ Start with [architecture](docs/ARCHITECTURE.md), [verification](docs/ACCEPTANCE.
 
 ## Development
 
-Use `codex/` branches, small pull requests, CI and review before merging. Do not
-auto-merge dependency or agent changes. No production-deploy workflow is enabled
+As requested on November 5, validated changes are committed directly to `main`,
+without opening pull requests. Run the same review and tests before pushing. Do not
+blindly apply dependency or agent changes. No production-deploy workflow is enabled
 until private hosting, authorization and rollback tests pass. The budget the user
 mentions in chat is an input to a scenario, never permission to schedule purchases.
 
-This repository must remain private. GitHub hosts code and synthetic fixtures;
-private runtime financial records belong in a separate access-controlled store.
+The user authorized temporarily public source on November 5. GitHub contains code
+and synthetic fixtures only; private runtime financial records and credentials
+must never enter Git, build artifacts or logs regardless of repository visibility.
+The hosted dashboard remains owner-private.
+
+The official Robinhood Trading MCP has **not** been enabled: broker-enforced
+read-only authorization is unverified. See the [connection review](docs/ROBINHOOD_READ_ONLY_REVIEW.md)
+and [evidence policy](docs/EVIDENCE_POLICY.md). A tool allowlist is not a read-only
+broker credential. Local imports are not automatically available to the hosted plugin.

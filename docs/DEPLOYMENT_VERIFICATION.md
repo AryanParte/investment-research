@@ -1,7 +1,55 @@
-# Pilot verification — November 3, 2026 (America/New_York)
+# Pilot verification
 
 This is a synthetic-data engineering pilot. The complete investment service and
 phone briefing pipeline are **not yet functional**.
+
+## November 5: evidence boundary repair
+
+- The user changed GitHub source visibility to public and requested direct main
+  commits. GitHub metadata confirmed public. Source contains only code and fictional
+  fixtures; nested private/runtime artifacts and credential files are rejected by
+  repository regression checks. Hosting remains owner-private with zero external visitors.
+- Sites version 3, source `d444fe490c042bc94d7cb766642583d206fd1173`, deployed
+  successfully at 00:17:03 UTC November 6 (7:17:03 PM Eastern November 5).
+  It passed 23 gateway tests, full TypeScript checking and the official Site build.
+- Authenticated `get_latest_briefing` at 00:17:10 UTC returned `status: blocked`,
+  `report: null`, `allocations: []` and explicit missing-evidence reasons. It did not
+  return the fictional holdings. `get_system_status` also returned the new evidence
+  contract, disabled advice readiness and no financial permissions.
+- New API tools provide explicit demo access and allocation-readiness checks.
+  The existing connected client's tool catalog still showed the four older schemas
+  at that time; existing tool calls reached the new implementation successfully.
+  A fresh cloud task subsequently discovered and invoked the new readiness tool.
+  Already-open chats may retain older schemas; their status/default reads still fail closed.
+- Dashboard follow-up prompts explicitly distinguish fictional exploration from
+  dated manual evidence. Its updated synthetic HTML hash is
+  `17c03287deb32a6c7e54a0a500b537044fd302cf436023fa43433235af60330b`;
+  the immutable fictional report remains `brief-e2b2b07bb6e6cfdc49e1`.
+- A one-time cloud conversation regression was scheduled for 7:20 PM Eastern,
+  automation `Automation_7c99814622bc8191b68cd576d5fb4cb2`, using the hypothetical
+  $2,500 allocation question. The durable cloud task
+  `01a1ae39-6a6c-7049-8e7b-f5a04078a051` completed at 7:19:51 PM Eastern, slightly
+  before the scheduled time. Its actual calls were `assess_allocation_readiness`
+  with amount 2500/USD/combined, `get_latest_briefing`, and `get_system_status`.
+  Its final answer declined a personal split and stock picks, named the missing
+  holdings/prices/IRA evidence, preserved the fictional report's November 3 date,
+  and attributed its status claims to those tools. It did not invent holdings or
+  give allocation amounts. The general-education paragraph was labeled as such;
+  this test does not validate investment recommendations or future model responses.
+  New phone push receipt was not independently re-confirmed for this test.
+- Robinhood Trading MCP remains disconnected: reviewed official documentation and
+  OAuth metadata do not establish broker-enforced read-only authorization. See
+  `ROBINHOOD_READ_ONLY_REVIEW.md`. No OAuth authorization or broker action occurred.
+- Local validation passed 90 Python tests, including 32 local-MCP cases, plus 23
+  hosted gateway tests. An actual local CLI subprocess completed initialization,
+  tool discovery, a fictional imported-report read and rejection of an unknown
+  write tool. Independent review found and verified fixes for cross-account price
+  inconsistencies, inherited Git-index overrides and raw CLI error disclosure.
+  No real portfolio import, Codex MCP registration or local-to-cloud sync was tested.
+
+The earlier private-repository and four-tool observations below are historical.
+
+## November 3 engineering pilot
 
 ## Verified
 

@@ -78,7 +78,7 @@ delivered report separately from last generated report. An independent watchdog
 must detect a job that never starts and deliver a tested failure notice.
 
 Exercise stale data, malformed imports, failed providers, revoked authentication,
-duplicate tasks and missing schedules. Configure reviewed Codex maintenance PRs,
+duplicate tasks and missing schedules. Configure reviewed Codex maintenance commits,
 dependency/security checks and research evaluations. No autonomous deployment or
 financial capability may be introduced by maintenance.
 

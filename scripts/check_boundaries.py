@@ -9,6 +9,10 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 BLOCKED_IMPORTS = {"robin_stocks", "alpaca", "alpaca_trade_api", "ib_insync", "ccxt", "plaid", "stripe"}
 BLOCKED_DIRS = {"private", "runtime", "data", "dist", "reports", "node_modules"}
+DEPENDENCY_METADATA = {
+    "integrations/sites-pilot/runtime/package.json",
+    "integrations/sites-pilot/runtime/package-lock.json",
+}
 
 
 def main():
@@ -19,7 +23,8 @@ def main():
     errors = []
     for name in filter(None, tracked):
         path = Path(name)
-        if path.parts[0] in BLOCKED_DIRS or path.name.startswith(".env") or path.suffix in {".db", ".sqlite", ".log"}:
+        blocked_directory = any(part in BLOCKED_DIRS for part in path.parts[:-1]) and name not in DEPENDENCY_METADATA
+        if blocked_directory or path.name.startswith(".env") or path.suffix in {".db", ".sqlite", ".log", ".pem", ".p12", ".key"}:
             errors.append(f"Private/runtime artifact tracked: {name}")
         full = ROOT / path
         if not full.is_file() or full.suffix in {".png", ".zip"}:

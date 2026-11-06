@@ -8,8 +8,8 @@ Do not call the entire product functional before all relevant rows pass.
 | Private import | Sanitized real export adapter + full statement reconciliation | Pending user data/adapter |
 | Research | Primary-source provenance + factual review + freshness checks | Schema/fixture tests only |
 | Market data | Real provider, licensed prices, benchmark total return, corporate actions | Not configured |
-| Local pipeline | Fixture import → reconcile → compute → immutable report → dashboard | Pass, 55 Python tests and 15 gateway/artifact tests after hosting hardening |
-| Private GitHub | Metadata confirms private; source tree verified; CI run completes | Private; source uploaded; CI run 41753123848 passed |
+| Local pipeline | Fixture import → reconcile → compute → immutable report → dashboard | Pass, 90 Python tests and 23 gateway/artifact tests after evidence-boundary hardening |
+| Source privacy | User-authorized visibility; no private data, credentials or runtime artifacts | User made source public November 5; dashboard remains owner-private. Nested private-path regression checks added |
 | Private gateway | Owner-private access, unauthenticated reads denied, only bounded read tools | Deployed; anonymous and spoofed identity requests both HTTP 403 |
 | Cloud retrieval | Fresh cloud ChatGPT chat reads exact report ID/source evidence | Separate durable cloud task read exact report and holding research successfully |
 | Mobile UI | Phone shows dashboard or intentional Markdown fallback | User confirmed linked private dashboard readable and interactive; embedded widget not verified |
@@ -20,6 +20,9 @@ Do not call the entire product functional before all relevant rows pass.
 | Failure notification | Missing job, failed provider, revoked auth each alerts user | Not verified |
 | Maintenance | Scheduled CI actually runs; failures surfaced; reviewed change/rollback | First PR CI passed; weekly recurrence/failure alerts not yet observed |
 | Dependency safety | Audit production and build dependencies; inspect runtime reachability | Production-only audit zero; full audit has 37 flagged entries. Personal-data readiness blocked |
+| Personal advice gate | Missing/sample/stale evidence cannot produce personal allocations | Hosted v3 defaults to blocked; explicit demo opt-in; 23 gateway regressions pass. Native reads and a fresh cloud $2,500 conversation test declined unsupported allocations |
+| Broker read-only authority | Broker-enforced authorization excludes every financial mutation | Unverified; Robinhood Trading MCP not connected. Public metadata advertises only internal scope |
+| Local MCP | Protected imported reports, content integrity, source/history/reconciliation checks | Fixed stdio read tools implemented; no live account import or mobile/cloud connection claimed |
 
 The user connected the private pilot plugin. Hosted report and exact-version
 holding research retrieval pass both here and in the separate scheduled cloud task.
@@ -30,7 +33,8 @@ DEPLOYMENT_VERIFICATION.md for dated evidence.
 ## Phone acceptance script
 
 1. Connect the private sample research plugin in ChatGPT Work using the same account.
-2. Ask for the latest briefing; confirm the exact report ID and synthetic label.
+2. Explicitly ask for a fictional demo briefing; confirm the exact report ID and
+   synthetic label. A default personal briefing request must instead return unavailable.
 3. Ask why the largest holding is flagged. Confirm quantities, source date and the
    review threshold match the report, rather than invented live data.
 4. Close the desktop app / make the host unavailable, then run the cloud test.

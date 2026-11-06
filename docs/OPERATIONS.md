@@ -14,11 +14,12 @@ blocked until the chosen channel and missed-run scenario are tested.
 
 ## Engineering cadence
 
-- Each pull request/push: expected-value accounting tests, pipeline failure tests,
+- Each validated direct push: expected-value accounting tests, pipeline failure tests,
   privacy/capability boundary checks, syntax checks and synthetic dashboard build.
 - Weekly GitHub Actions: the same regression suite and production dependency
-  advisory checks against the sanitized hosting lockfile. Dependabot creates
-  reviewed update PRs for GitHub Actions and hosting npm dependencies. Copying a
+  advisory checks against the sanitized hosting lockfile. Automatic version-update
+  pull requests are disabled under the user's November 5 workflow preference;
+  review dependency updates and commit validated changes directly. Copying a
   dependency update into the actual Site still requires its full build and
   private deployment checks. No private imports, report attachments or debug dumps.
 - Monthly: inspect dependency/security advisories, data provider contracts,
@@ -61,4 +62,4 @@ by the selected hosting platform and protected by identity-based access (not yet
 configured for real data). Local hash chaining detects accidental edits but is
 neither encryption nor protection from a privileged attacker. Backups must be
 encrypted, access-controlled, versioned and restore-tested. Do not store personal
-records in GitHub even though this repository is private.
+records in GitHub regardless of whether the source repository is public or private.

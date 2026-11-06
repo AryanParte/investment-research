@@ -6,10 +6,19 @@ identity, private financial input, or deployment runtime. The main Python projec
 remains the accounting engine. This overlay reads its versioned sample output; it
 does not run Python in Cloudflare Workers or refresh a portfolio in the cloud.
 
-The gateway exposes four read-only research tools, plus an optional bundled MCP
+The gateway exposes six read-only research tools, plus an optional bundled MCP
 Apps dashboard. Report IDs, thesis versions, and source timestamps are shared by
 the UI and tools. No financial transaction capability exists. See
 `docs/MCP-PILOT.md` for protocol, authentication, and verification boundaries.
+
+`get_latest_briefing` now returns blocked with no report because this deployment
+has no personal portfolio. `assess_allocation_readiness` returns missing evidence
+and no allocations. Fictional exploration uses `get_demo_briefing` with an explicit
+`acknowledge_synthetic: true`; exact report and holding reads require that flag too.
+Schedules that intentionally test a demo must request it explicitly. No tool accepts
+caller-provided holdings, eligibility or verification overrides. Server responses
+and discovery instruct the model to abstain from personal allocations when blocked;
+this is not a guarantee that every conversational response will obey.
 
 ## Reproduce the source
 
@@ -70,7 +79,7 @@ The initial template audit found vulnerable production packages, so this pilot
 uses Next and eslint-config-next **16.4.5** and explicit patched resolutions for
 sharp **0.35.5**, source-map-js **1.2.2**, fast-uri **3.1.9**, and
 baseline-browser-mapping **2.11.0**. These are dated minimum remediation choices,
-not a claim that those versions will remain free of advisories. Review update PRs
+not a claim that those versions will remain free of advisories. Review updates
 and remove overrides when supported upstream ranges resolve safely on their own.
 
 CI can run `npm audit --omit=dev --audit-level=moderate` in `runtime/` from its lockfile

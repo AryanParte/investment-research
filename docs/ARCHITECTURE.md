@@ -24,7 +24,7 @@ Read-only data feeds ─> Source cache + provenance
                              │
               ChatGPT mobile + continuing conversation
 
-Private GitHub ──> synthetic CI / reviewed changes ──> private deployment
+Code-only GitHub ──> synthetic CI / reviewed changes ──> private deployment
 Independent watchdog ──> separately verified failure notification
 ```
 
@@ -92,7 +92,8 @@ horizons; discovery can include any sector. Research candidates are not holdings
 
 ## Engineering and account setup
 
-- GitHub repo: private, code and fictional tests only. PR/CI/review workflow.
+- GitHub repo: temporarily public as requested November 5; code and fictional tests
+  only. Reviewed, tested direct commits to main; the hosted data service stays private.
 - Cloud data permissions: minimum storage/read scopes; no brokerage permissions.
 - Market feed key (if needed): user supplies through secret manager, never chat/Git.
 - ChatGPT private plugin: verify connection in the intended cloud/mobile surface.

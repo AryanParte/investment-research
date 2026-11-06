@@ -34,13 +34,24 @@ the implementation but are not the security mechanism.
 
 - `server/discover`: MCP 2026-07-28 stateless discovery.
 - `initialize`: limited legacy compatibility for 2025-03-26/2025-06-18.
-- `tools/list` and `tools/call`: four read-only tools with structured output schemas.
-- `get_latest_briefing`: retrieve the fixed sample report.
-- `get_briefing(report_id)`: retrieve only that exact version; never silently substitute.
-- `get_holding_research(symbol, report_id)`: existing holding evidence, matching
+- `tools/list` and `tools/call`: six read-only tools with structured output schemas.
+- `get_latest_briefing`: blocked personal-data response; no report or allocations.
+- `get_demo_briefing(acknowledge_synthetic: true)`: explicit fictional demo only.
+- `get_briefing(report_id, acknowledge_synthetic: true)`: retrieve only that exact
+  fictional version; never silently substitute or use as personal evidence.
+- `get_holding_research(symbol, report_id, acknowledge_synthetic: true)`: fictional holding evidence, matching
   thesis versions, and their sources. If several thesis versions are present, retain
   them and mark the selection ambiguous instead of choosing one by guesswork.
 - `get_system_status`: explicit capabilities, freshness, and unverified delivery state.
+- `assess_allocation_readiness(amount, currency, account_scope)`: always blocked in
+  this pilot. It returns missing personal/research evidence and an empty allocation
+  list. Caller-supplied evidence, eligibility and override fields are rejected.
+
+Discovery, tool descriptions and every tool result carry the evidence contract.
+The model is instructed to check status/readiness before personal advice, never
+infer current holdings or IRA room from conversation history, and distinguish
+product-source citations from evidence for a personal allocation. These instructions
+reduce risk but cannot enforce a host model's prose. Conversation evaluation is separate.
 
 The envelope distinguishes immutable `report_as_of` from runtime `served_at`.
 The 72-hour review flag is a pilot display rule, not a claim that any market data is
