@@ -31,7 +31,10 @@ Use a user-provided sanitized export to implement the actual Robinhood CSV
 adapter. Import the complete ledger and compare against statements locally. Keep
 account aliases; exclude account numbers. Check historical transfers, splits,
 dividends, fees and missing history explicitly. A brokerage connection is optional
-and permitted only with independently verified provider-enforced read-only scopes.
+and may use either broker-enforced read-only authorization or a separately controlled
+gateway that exposes only approved reads. The latter requires verified isolation
+from Codex's shell, browser, secrets, IAM and deployment paths plus review of the
+actual upstream grant before authorization; see ISOLATED_GATEWAY_DESIGN.md.
 
 Select one licensed daily market-data provider with corporate actions and a
 total-return benchmark. Validate at least one complete real valuation/benchmark
@@ -87,5 +90,7 @@ financial capability may be introduced by maintenance.
 Only meaningful external setup needs the user: connect the private research app
 in the intended cloud chat, confirm phone notification behavior, provide a secure
 sample export when ready, and authorize the selected private compute/data plan
-after its actual cost and permissions are known. No financial password, trading
-scope, bank authorization or recurring contribution is requested.
+after its actual cost and permissions are known. No financial password, verification
+code, bank authorization or recurring contribution is requested. Any broader
+Robinhood OAuth grant is disclosed and reviewed before separate explicit approval;
+the user signs in with Robinhood on a trusted device outside agent access.

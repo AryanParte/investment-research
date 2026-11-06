@@ -1,10 +1,19 @@
 # Investment Research — mandatory boundaries
 
-This is recommendation-only software. Do not add brokerage, banking, payments,
-order execution, transfers, deposits, withdrawals, or recurring investment APIs.
-No financial credentials may be collected or stored. A future brokerage import
-requires independently verified, broker-enforced read-only scopes; otherwise
-continue with manual imports. Tool annotations are not an authorization boundary.
+This is recommendation-only software. Do not expose brokerage, banking, payments,
+order execution, transfers, deposits, withdrawals, or recurring investment actions.
+No financial credentials may enter the agent-accessible filesystem, environment,
+logs, tool responses, repository or deployment plane. The user's updated November 5
+instruction permits evaluating a separate, independently controlled gateway that
+holds broader upstream credentials and enforces read-only access in software.
+Native broker read-only scopes are preferable but are not a prerequisite for that
+architecture. Clearly distinguish broker-enforced authorization from gateway-enforced
+access. Codex must have neither broker credentials nor authority to weaken/deploy
+the gateway, change its IAM, or reach a credentialed bypass. Current account
+authorization is NOT granted. Present the concrete design and actual upstream
+permission evidence before the user signs in directly with Robinhood. No real
+financial mutation may be used as a test; use mocks or a documented non-executing
+sandbox. Tool annotations, prompts and local hidden tools are not enforcement.
 
 Use synthetic sample data in source, tests, logs, and CI. Personal holdings,
 transactions, account identifiers, reports, credentials, and research journals

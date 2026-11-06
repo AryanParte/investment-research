@@ -8,7 +8,7 @@ Do not call the entire product functional before all relevant rows pass.
 | Private import | Sanitized real export adapter + full statement reconciliation | Pending user data/adapter |
 | Research | Primary-source provenance + factual review + freshness checks | Schema/fixture tests only |
 | Market data | Real provider, licensed prices, benchmark total return, corporate actions | Not configured |
-| Local pipeline | Fixture import → reconcile → compute → immutable report → dashboard | Pass, 90 Python tests and 23 gateway/artifact tests after evidence-boundary hardening |
+| Local pipeline | Fixture import → reconcile → compute → immutable report → dashboard | Pass, 108 Python tests and 23 hosted gateway/artifact tests including the independent-gateway policy prototype |
 | Source privacy | User-authorized visibility; no private data, credentials or runtime artifacts | User made source public November 5; dashboard remains owner-private. Nested private-path regression checks added |
 | Private gateway | Owner-private access, unauthenticated reads denied, only bounded read tools | Deployed; anonymous and spoofed identity requests both HTTP 403 |
 | Cloud retrieval | Fresh cloud ChatGPT chat reads exact report ID/source evidence | Separate durable cloud task read exact report and holding research successfully |
@@ -22,6 +22,7 @@ Do not call the entire product functional before all relevant rows pass.
 | Dependency safety | Audit production and build dependencies; inspect runtime reachability | Production-only audit zero; full audit has 37 flagged entries. Personal-data readiness blocked |
 | Personal advice gate | Missing/sample/stale evidence cannot produce personal allocations | Hosted v3 defaults to blocked; explicit demo opt-in; 23 gateway regressions pass. Native reads and a fresh cloud $2,500 conversation test declined unsupported allocations |
 | Broker read-only authority | Broker-enforced authorization excludes every financial mutation | Unverified; Robinhood Trading MCP not connected. Public metadata advertises only internal scope |
+| Independent gateway alternative | Codex cannot access the broader broker token, change policy, deploy a bypass or use an owner session | Design and 18 mock policy tests only. Current desktop/Sites control plane fails this isolation requirement; separate admin/agent boundary and exact OAuth permissions must be verified before linking |
 | Local MCP | Protected imported reports, content integrity, source/history/reconciliation checks | Fixed stdio read tools implemented; no live account import or mobile/cloud connection claimed |
 
 The user connected the private pilot plugin. Hosted report and exact-version

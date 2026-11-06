@@ -41,6 +41,11 @@ allocation. Clearly labeled general education and fictional exploration remain a
   personal storage, write tools or supplied-evidence overrides.
 - Local MCP: protected imported-report reads only; freshness, history, provenance,
   permission and statement checks; no account connection or recommendation engine.
+- Proposed isolated collector: broker authentication alone cannot establish full
+  history or current research. A future real adapter must preserve source/collection
+  times, approved account coverage, pagination and reconciliation. The new gateway
+  kernel is mock-only and always blocks recommendations; no argument or fixture can
+  certify independent isolation, OAuth authority, or production readiness.
 - CI: synthetic regression cases for absent/stale/sample evidence, forged inputs,
   protocol/authentication boundaries and private-file exclusions.
 - Conversation evaluation: separately check whether the host model follows the

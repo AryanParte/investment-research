@@ -3,6 +3,34 @@
 This is a synthetic-data engineering pilot. The complete investment service and
 phone briefing pipeline are **not yet functional**.
 
+## November 5: independent-gateway design revision
+
+The user clarified that a separately enforced gateway may hold a broader upstream
+token, provided Codex cannot access it, change the policy or deploy a bypass. The
+native-scope-only prerequisite is superseded. This revision does not authorize
+an account connection.
+
+`ISOLATED_GATEWAY_DESIGN.md` specifies a separate owner-controlled collector,
+private snapshot store, read-only downstream reader, independent release/IAM
+controls and restrictions on owner browser/admin sessions. `GATEWAY_AUTH_REVIEW.md`
+records supported OAuth metadata and the remaining exact-grant/custom-client
+unknowns. Neither document proves those controls deployed.
+
+The new internal `MockReadGateway` has four fixed fixture reads, strict account
+scope/input/output checks, bounded transaction pagination, freshness validation
+and generic errors. It contains no network, OAuth, credentials, live adapter,
+authenticated server or production activation switch. Eighteen new tests include
+denied mutations making zero fixture calls, raw-call/URL/override rejection,
+secret-field rejection, stale/future/incomplete evidence, and masked exceptions.
+Independent review found no remaining material issue in this mock-only scope.
+
+Local validation: **108 Python tests plus 23 existing hosted gateway tests pass**,
+with repository boundary checks. The existing hosted plugin, evidence gate and
+financial permissions were not changed or redeployed. Real IAM isolation, user
+authentication, collector operation, cross-read reconciliation, snapshot signing,
+mobile access to real evidence and failure alerts remain unverified. No paid cloud
+resource, OAuth registration, login, token exchange or financial action occurred.
+
 ## November 5: evidence boundary repair
 
 - The user changed GitHub source visibility to public and requested direct main

@@ -1,5 +1,12 @@
 # Robinhood MCP read-only review
 
+**Historical decision, superseded by the user's later November 5 clarification.**
+The factual observations below remain dated evidence. The native-scope-only
+prerequisite and categorical rejection of a broader-token proxy no longer apply.
+See [GATEWAY_AUTH_REVIEW.md](GATEWAY_AUTH_REVIEW.md) and
+[ISOLATED_GATEWAY_DESIGN.md](ISOLATED_GATEWAY_DESIGN.md): a genuinely independent
+gateway is an allowed design. No account authorization has been granted.
+
 Reviewed **November 5, 2026, approximately 7:10 p.m. America/New_York** (November 6, 00:10 UTC). Public documentation and unauthenticated HTTPS metadata only. No installation, login, OAuth authorization, account opening, tool execution, or financial action occurred. This file contains no personal account data.
 
 **Decision: do not connect the trading MCP yet. Broker-enforced read-only authorization has not been verified. Continue with manual imports.** This is an unresolved permission requirement, not a claim that Robinhood cannot support it.

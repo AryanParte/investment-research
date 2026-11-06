@@ -1,7 +1,7 @@
 # Investment Research
 
 A recommendation-only portfolio accounting and research system.
-**No brokerage, banking, payments, financial credentials or trade execution.**
+**No agent-held broker credentials, financial mutations or trade execution.**
 
 Status: **synthetic-data MVP with a deployed owner-private Sites pilot**.
 GitHub CI tests synthetic data; the hosted gateway rejects anonymous and forged-identity reads.
@@ -46,6 +46,8 @@ no write API. Stop it with Ctrl-C.
   network client. See [local MCP](docs/LOCAL_MCP.md) for its separate acceptance gates.
 - A fail-closed hosted advice contract: personal requests receive missing evidence
   and no allocation, while fictional demo reads require explicit opt-in.
+- A mock-only gateway policy prototype for four fixed portfolio reads. It validates
+  bounded inputs and dated fixture responses; it has no OAuth, live adapter or token.
 
 ## Important calculation limits
 
@@ -104,7 +106,12 @@ and synthetic fixtures only; private runtime financial records and credentials
 must never enter Git, build artifacts or logs regardless of repository visibility.
 The hosted dashboard remains owner-private.
 
-The official Robinhood Trading MCP has **not** been enabled: broker-enforced
-read-only authorization is unverified. See the [connection review](docs/ROBINHOOD_READ_ONLY_REVIEW.md)
-and [evidence policy](docs/EVIDENCE_POLICY.md). A tool allowlist is not a read-only
-broker credential. Local imports are not automatically available to the hosted plugin.
+The official Robinhood Trading MCP has **not** been enabled. The user's revised
+requirement permits **gateway-enforced read-only access** even if the upstream token
+has broader authority, provided Codex cannot access that token or change/deploy the
+enforcement service. See the [isolated gateway design](docs/ISOLATED_GATEWAY_DESIGN.md),
+[current authorization review](docs/GATEWAY_AUTH_REVIEW.md) and
+[evidence policy](docs/EVIDENCE_POLICY.md). Independent isolation and exact upstream
+permissions remain unverified; account authorization has not been granted. The
+current Mac/Sites deployment plane cannot hold the broker token safely under this
+boundary. Local imports are not automatically available to the hosted plugin.

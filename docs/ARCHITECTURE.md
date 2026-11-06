@@ -2,11 +2,15 @@
 
 ## Product boundaries
 
-Research, accounting, scenarios and recommendations only. No financial write
-tools, brokerage/bank credentials, payment authorization, generic broker proxy,
+Research, accounting, scenarios and recommendations only. No agent-facing financial
+write tools, broker credentials, payment authorization, generic broker proxy,
 recurring purchases or autonomous execution. Start with secure manual imports.
-Read-only labels alone are not authorization: any future broker adapter requires
-verified provider-enforced read-only permissions and independent scope inspection.
+The user's revised November 5 requirement permits a separate credentialed collector
+with independently enforced read-only downstream access. Native read-only scope
+is preferable but no longer mandatory; exact upstream permissions and independent
+control-plane isolation must be reviewed before account authorization. See
+[the isolated gateway decision](ISOLATED_GATEWAY_DESIGN.md) for the concrete design,
+current full-access desktop blocker, residual risk and mock-only implementation.
 
 ## Preferred production design
 
@@ -94,7 +98,9 @@ horizons; discovery can include any sector. Research candidates are not holdings
 
 - GitHub repo: temporarily public as requested November 5; code and fictional tests
   only. Reviewed, tested direct commits to main; the hosted data service stays private.
-- Cloud data permissions: minimum storage/read scopes; no brokerage permissions.
+- Research cloud permissions: minimum snapshot reads; no brokerage permissions.
+  Any future broker credential belongs only to a separately administered collector
+  outside Codex's shell, IAM and deployment authority, after explicit account approval.
 - Market feed key (if needed): user supplies through secret manager, never chat/Git.
 - ChatGPT private plugin: verify connection in the intended cloud/mobile surface.
 - Phone notification: user enables OS/app category and acknowledges an actual test.
